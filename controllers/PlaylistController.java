@@ -1,0 +1,38 @@
+package controllers;
+import java.util.ArrayList;
+import models.Playlist;
+
+public class PlaylistController {
+
+    private static ArrayList<Playlist> playlists = new ArrayList<Playlist>();
+
+    public void cadastrar(Playlist playlist) {
+        playlists.add(playlist);
+    }
+
+    public ArrayList<Playlist> listar() {
+        return playlists;
+    }
+
+    public Playlist buscarPlaylist(String nome){
+        for (Playlist playlistCadastrada : playlists) {
+            if(playlistCadastrada.getNome().equals(nome)){
+                return playlistCadastrada;
+            }
+            return null;
+        }
+        return null;
+    }
+
+    public Playlist remover(String nome){
+       
+        for (Playlist playlistCadastrada : playlists) {
+            if(playlistCadastrada.getNome().equals(nome)){
+                playlists.remove(playlistCadastrada);
+                return playlistCadastrada;
+            }
+        }
+        return null;
+    }
+    
+}
