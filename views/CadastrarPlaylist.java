@@ -27,12 +27,12 @@ public class CadastrarPlaylist {
         if(usuario != null){
             playlist.setCriador(usuario);
 
-            String nomeversao= Console.readString("Digite o nome da versão: ");
-            Versao versao= versaoController.buscarPorNome(nomeversao);
+            String musica= Console.readString("Digite o nome da versão: ");
+            Versao versao= versaoController.buscarPorNome(musica);
     
 
             if(versao != null){
-                playlist.setCriador(usuario);
+                playlist.setMusica(versao);
                 playlistController.cadastrar(playlist);
                 System.out.println("Playlist cadastrada.");
             }

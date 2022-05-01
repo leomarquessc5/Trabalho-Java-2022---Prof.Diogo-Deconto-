@@ -4,13 +4,14 @@ public class Versao {
 
     private Musica musica;
     private Artista interprete;
-    private String nomeVersao;
+    private String nome;
 
-    public String getNomeVersao() {
-        return nomeVersao;
+
+    public String getNome() {
+        return nome;
     }
-    public void setNomeVersao(String nomeVersao) {
-        this.nomeVersao = nomeVersao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public Musica getMusica() {
         return musica;
@@ -26,7 +27,7 @@ public class Versao {
     }
 
     @Override public String toString(){
-        return "Música: " + musica + "Artista: " + interprete;
+        return "Música: " + musica + "Artista: " + interprete + "Versão: " + nome;
     }
     
 }

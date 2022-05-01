@@ -15,7 +15,7 @@ public class VersaoController {
 
     public Versao buscarPorNome(String nome){
         for (Versao versaoCadastrada : versoes) {
-            if(versaoCadastrada.getMusica().toString().equals(nome)){
+            if(versaoCadastrada.getNome().equals(nome)){
                 return versaoCadastrada;
             }
         }
@@ -23,10 +23,10 @@ public class VersaoController {
     }
 
     public Versao remover(String nome){
-        for (Versao versaoMusica : versoes){
-            if(versaoMusica.getMusica().toString().equals(nome)){
-                versoes.remove(versaoMusica);
-                return versaoMusica;
+        for (Versao versaoCadastrada : versoes){
+            if(versaoCadastrada.getNome().equals(nome)){
+                versoes.remove(versaoCadastrada);
+                return versaoCadastrada;
             }
         }
         return null;

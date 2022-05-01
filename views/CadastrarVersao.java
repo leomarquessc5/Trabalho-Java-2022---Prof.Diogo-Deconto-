@@ -17,6 +17,8 @@ public class CadastrarVersao {
 
         System.out.println("\n -- RELACIONAR VERSÃO DA MÚSICA AO ARTISTA: -- \n");
 
+        versao.setNome(Console.readString("Digite o nome da versão: "));
+        
         String versaoMusica = Console.readString("Digite o nome da Música: ");
         Musica musica = musicaController.buscarPorNome(versaoMusica);
 
