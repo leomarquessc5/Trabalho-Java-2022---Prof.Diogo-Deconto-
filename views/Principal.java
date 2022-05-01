@@ -12,8 +12,10 @@ public class Principal {
             System.out.println("3 - Remover Música");
             System.out.println("4 - Cadastrar Artista");
             System.out.println("5 - Listar Artistas cadastrados");
-            System.out.println("6- Remover Artistas cadastrados");
+            System.out.println("6 - Remover Artistas cadastrados");
             System.out.println("7 - Cadastrar versão de Música");
+            System.out.println("8 - Listar Canções");
+            System.out.println("9 - Remover Canções");
             System.out.println("0 - Sair\n");
             opcao = Console.readInt("Digite uma opção: ");
 
@@ -45,6 +47,14 @@ public class Principal {
                 case 7:
                     CadastrarVersao cadastrarVersao = new CadastrarVersao();
                     cadastrarVersao.cadastrar();
+                    break;
+                case 8:
+                    ListarVersoes listarVersao = new ListarVersoes();
+                    listarVersao.listar();
+                    break;
+                case 9:
+                    RemoverVersao removerVersao = new RemoverVersao();
+                    removerVersao.remover();
                     break;
                 default:
                     System.out.println("\n --OPÇÃO INVÁLIDA -- \n");

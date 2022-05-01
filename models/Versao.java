@@ -19,7 +19,7 @@ public class Versao {
     }
 
     @Override public String toString(){
-        return "Música: " + musica + "Artista: " + interprete;
+        return "Música: " + musica.getNome() + interprete + " ";
     }
     
 }

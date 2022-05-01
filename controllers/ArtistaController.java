@@ -20,7 +20,7 @@ public class ArtistaController {
             if(artistaCadastrado.getArtista().equals(nome)){
                 return artistaCadastrado;
             }
-            return null;
+            
         }
         return null;
     }
@@ -32,7 +32,7 @@ public class ArtistaController {
                 artistas.remove(artistaCadastrado);
                 return artistaCadastrado;
             }
-            return null;
+            
         }
         return null;
     }

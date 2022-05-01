@@ -15,29 +15,17 @@ public class VersaoController {
         return versoes;
     }
 
-    // public Versao remover(String nome){
+    public Versao remover(String abc){
 
-    //     for (Versao versaoMusica : versoes){
-    //         if(versaoMusica.getMusica().equals(nome)){
-    //             versoes.remove(versaoMusica);
-    //             return versaoMusica;
+        for (Versao versaoCadastrada : versoes){
+            if(versaoCadastrada.getMusica().toString().equals(abc)){
+                versoes.remove(versaoCadastrada);
+                return versaoCadastrada;
             
-    //         }
-    //         return null;
-    //     }
-    //     return null;
-    // }
+            }
+            
+        }
+        return null;
+    }
     
-    // public Versao remover(String versaoRemover){
-    //     for(Versao versaoCadastrada : versoes){
-    //         if(versaoCadastrada.getMusica().equals(versaoRemover)){
-    //             versoes.remove(versaoCadastrada);
-    //             return versaoCadastrada;
-    //         }
-    //         return null;
-    //     }
-    //     return null;
-    // }
-
-
 }

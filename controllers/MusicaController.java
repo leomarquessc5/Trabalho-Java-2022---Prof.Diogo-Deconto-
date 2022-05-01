@@ -19,19 +19,18 @@ public class MusicaController {
             if(musicaCadastrada.getNome().equals(nome)){
                 return musicaCadastrada;
             }
-            return null;
         }
         return null;
     }
 
-    public Musica remover(String nomeMusica){
+    public Musica remover(String nome){
        
         for (Musica musicaCadastrada : musicas) {
-            if(musicaCadastrada.getNome().equals(nomeMusica)){
+            if(musicaCadastrada.getNome().equals(nome)){
                 musicas.remove(musicaCadastrada);
                 return musicaCadastrada;
             }
-            return null;
+            
         }
         return null;
     }

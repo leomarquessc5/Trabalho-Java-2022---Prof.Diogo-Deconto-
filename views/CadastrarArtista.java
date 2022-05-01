@@ -1,7 +1,7 @@
 package views;
 
 import controllers.ArtistaController;
-import licaoaula.util.Console;
+import utils.Console;
 import models.Artista;
 
 public class CadastrarArtista {
