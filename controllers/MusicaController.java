@@ -31,6 +31,7 @@ public class MusicaController {
                 musicas.remove(musicaCadastrada);
                 return musicaCadastrada;
             }
+            return null;
         }
         return null;
     }

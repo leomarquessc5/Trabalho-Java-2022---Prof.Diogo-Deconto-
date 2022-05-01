@@ -24,8 +24,19 @@ public class ArtistaController {
         }
         return null;
     }
+    
+    public Artista remover(String nome){
+
+        for (Artista artistaCadastrado : artistas) {
+            if(artistaCadastrado.getArtista().equals(nome)){
+                artistas.remove(artistaCadastrado);
+                return artistaCadastrado;
+            }
+            return null;
+        }
+        return null;
+    }
+
 }
-
-
     
 
