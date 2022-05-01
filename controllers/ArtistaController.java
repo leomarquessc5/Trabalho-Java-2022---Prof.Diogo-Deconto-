@@ -1,7 +1,5 @@
 package controllers;
-
 import java.util.ArrayList;
-
 import models.Artista;
 
 public class ArtistaController {
@@ -20,7 +18,6 @@ public class ArtistaController {
             if(artistaCadastrado.getArtista().equals(nome)){
                 return artistaCadastrado;
             }
-            
         }
         return null;
     }
@@ -32,11 +29,11 @@ public class ArtistaController {
                 artistas.remove(artistaCadastrado);
                 return artistaCadastrado;
             }
-            
         }
         return null;
     }
 
 }
-    
 
+
+    

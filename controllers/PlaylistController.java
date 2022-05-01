@@ -19,7 +19,6 @@ public class PlaylistController {
             if(playlistCadastrada.getNome().equals(nome)){
                 return playlistCadastrada;
             }
-            return null;
         }
         return null;
     }

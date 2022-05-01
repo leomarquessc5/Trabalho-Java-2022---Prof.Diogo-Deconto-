@@ -1,7 +1,7 @@
-package views;
 
+package views;
 import controllers.ArtistaController;
-import licaoaula.util.Console;
+import utils.Console;
 
 public class RemoverArtista {
     

@@ -3,28 +3,26 @@ package models;
 public class Playlist {
 
     private String nome;
-    private Login usuario;
-    private Versao versao;
-    
+    private Login criador;
+    private Versao musica;
+
     public String getNome() {
         return nome;
     }
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public Login getUsuario() {
-        return usuario;
+    public Login getCriador() {
+        return criador;
     }
-    public void setUsuario(Login usuario) {
-        this.usuario = usuario;
+    public void setCriador(Login criador) {
+        this.criador = criador;
     }
-    public Versao getVersao() {
-        return versao;
+    public Versao getMusica() {
+        return musica;
     }
-    public void setVersao(Versao versao) {
-        this.versao = versao;
+    public void setMusica(Versao musica) {
+        this.musica = musica;
     }
 
-    
-    
 }

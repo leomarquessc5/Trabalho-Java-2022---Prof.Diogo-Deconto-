@@ -441,4 +441,3 @@ public class Console
 		 return readString("Entre com um valor do tipo 'String' (\"\" default) : ", "");
 	}
 }
-

@@ -1,7 +1,5 @@
 package controllers;
-
 import java.util.ArrayList;
-
 import models.Versao;
 
 public class VersaoController {
@@ -15,17 +13,23 @@ public class VersaoController {
         return versoes;
     }
 
-    public Versao remover(String abc){
-
-        for (Versao versaoCadastrada : versoes){
-            if(versaoCadastrada.getMusica().toString().equals(abc)){
-                versoes.remove(versaoCadastrada);
+    public Versao buscarPorNome(String nome){
+        for (Versao versaoCadastrada : versoes) {
+            if(versaoCadastrada.getMusica().toString().equals(nome)){
                 return versaoCadastrada;
-            
             }
-            
         }
         return null;
     }
-    
+
+    public Versao remover(String nome){
+        for (Versao versaoMusica : versoes){
+            if(versaoMusica.getMusica().toString().equals(nome)){
+                versoes.remove(versaoMusica);
+                return versaoMusica;
+            }
+        }
+        return null;
+    }
+
 }

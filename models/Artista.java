@@ -26,7 +26,8 @@ public class Artista {
     public String toString() {
         return
 
-        " | Artista: " + artista + " | Gênero: " + genero + " | ";
+        "Nome: " + artista + 
+        " | Gênero: " + genero;
     
     }
 }

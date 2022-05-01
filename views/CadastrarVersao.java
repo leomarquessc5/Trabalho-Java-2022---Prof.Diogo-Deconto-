@@ -1,6 +1,5 @@
 package views;
-
-import licaoaula.util.Console;
+import utils.Console;
 import models.Artista;
 import models.Musica;
 import models.Versao;

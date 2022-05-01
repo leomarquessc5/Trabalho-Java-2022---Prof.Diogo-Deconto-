@@ -19,7 +19,6 @@ public class LoginController {
             if(loginCadastrado.getUsuario().equals(usuario)){
                 return loginCadastrado;
             }
-            return null;
         }
         return null;
     }
