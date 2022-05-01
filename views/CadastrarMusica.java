@@ -12,7 +12,7 @@ public class CadastrarMusica {
         musica.setNome(Console.readString("Digite o nome da música: "));
         musica.setDuracao(Console.readDouble("Digite a duração da música: "));
         musica.setCompositor(Console.readString("Digite o nome do compositor: "));
-        musica.setInterprete(Console.readString("Digite o nome do interprete: "));
+        // musica.setInterprete(Console.readString("Digite o nome do interprete: "));
         musicaController.cadastrar(musica);
         System.out.println("\nMúsica cadastrada com sucesso !!!");
     }

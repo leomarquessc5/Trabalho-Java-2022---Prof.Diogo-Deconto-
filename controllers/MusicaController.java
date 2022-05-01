@@ -24,10 +24,10 @@ public class MusicaController {
         return null;
     }
 
-    public Musica remover(String nome){
+    public Musica remover(String nomeMusica){
        
         for (Musica musicaCadastrada : musicas) {
-            if(musicaCadastrada.getNome().equals(nome)){
+            if(musicaCadastrada.getNome().equals(nomeMusica)){
                 musicas.remove(musicaCadastrada);
                 return musicaCadastrada;
             }
