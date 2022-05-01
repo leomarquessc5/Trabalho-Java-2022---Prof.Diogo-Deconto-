@@ -6,7 +6,6 @@ public class Versao {
     private Artista interprete;
     private String nome;
 
-
     public String getNome() {
         return nome;
     }
@@ -27,7 +26,7 @@ public class Versao {
     }
 
     @Override public String toString(){
-        return "Música: " + musica + "Artista: " + interprete + "Versão: " + nome;
+        return " | Música: " + musica.getNome() + " | Artista: " + interprete + " ||" + nome;
     }
     
 }

@@ -9,6 +9,8 @@ import controllers.VersaoController;
 
 public class CadastrarVersao {
     public void cadastrar() {
+
+        String banana;
         
         Versao versao = new Versao ();
         VersaoController versaoController = new VersaoController();
@@ -17,9 +19,15 @@ public class CadastrarVersao {
 
         System.out.println("\n -- RELACIONAR VERSÃO DA MÚSICA AO ARTISTA: -- \n");
 
-        versao.setNome(Console.readString("Digite o nome da versão: "));
+        banana = Console.readString("Digite o nome da música: ");
         
-        String versaoMusica = Console.readString("Digite o nome da Música: ");
+        String versaoMusica = banana;
+        versao.setNome(banana);
+        
+        // String versaoMusica = Console.readString("Digite o nome da Música: ");
+
+        // versao.setNome(Console.readString("Digite o nome da Versão: "));
+    
         Musica musica = musicaController.buscarPorNome(versaoMusica);
 
         if (musica != null){

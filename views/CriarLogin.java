@@ -10,10 +10,10 @@ public class CriarLogin {
         Login login = new Login ();     
         LoginController loginController = new LoginController();
         System.out.println("\n -- CADASTRO DE USUÁRIOS -- \n");
-        login.setNomeUsuario(Console.readString("Digite seu nome: "));
-        login.setEmail(Console.readString("E-mail: "));
         login.setUsuario(Console.readString("Usuário: "));
-        login.setSenha(Console.readString("Senha: "));
+        // login.setNomeUsuario(Console.readString("Digite seu nome: "));
+        // login.setEmail(Console.readString("E-mail: "));
+        // login.setSenha(Console.readString("Senha: "));
         loginController.cadastro(login);
         System.out.println("\n Cadastro realizado !!!");
 

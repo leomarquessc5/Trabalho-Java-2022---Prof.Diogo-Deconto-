@@ -25,4 +25,9 @@ public class Playlist {
         this.musica = musica;
     }
 
+    @Override
+    public String toString() {
+        return "Playlist : " + nome + "Criador: " + criador + "Musica: " + musica + " | ";
+    }
+
 }

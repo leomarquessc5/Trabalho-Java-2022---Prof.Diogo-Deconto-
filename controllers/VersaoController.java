@@ -22,9 +22,10 @@ public class VersaoController {
         return null;
     }
 
-    public Versao remover(String nome){
+    public Versao remover(String abc){
+        
         for (Versao versaoCadastrada : versoes){
-            if(versaoCadastrada.getNome().equals(nome)){
+            if(versaoCadastrada.getNome().equals(abc)){
                 versoes.remove(versaoCadastrada);
                 return versaoCadastrada;
             }

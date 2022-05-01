@@ -16,7 +16,7 @@ public class PlaylistController {
 
     public Playlist buscarPlaylist(String nome){
         for (Playlist playlistCadastrada : playlists) {
-            if(playlistCadastrada.getNome().equals(nome)){
+            if(playlistCadastrada.getNome().toString().equals(nome)){
                 return playlistCadastrada;
             }
         }
@@ -26,7 +26,7 @@ public class PlaylistController {
     public Playlist remover(String nome){
        
         for (Playlist playlistCadastrada : playlists) {
-            if(playlistCadastrada.getNome().equals(nome)){
+            if(playlistCadastrada.getNome().toString().equals(nome)){
                 playlists.remove(playlistCadastrada);
                 return playlistCadastrada;
             }

@@ -1,4 +1,5 @@
 package views;
+
 import models.Playlist;
 import models.Login;
 import models.Versao;
@@ -27,25 +28,46 @@ public class CadastrarPlaylist {
         if(usuario != null){
             playlist.setCriador(usuario);
 
-            String musica= Console.readString("Digite o nome da versão: ");
-            Versao versao= versaoController.buscarPorNome(musica);
-    
+            
+            int contador = 0;
 
-            if(versao != null){
-                playlist.setMusica(versao);
-                playlistController.cadastrar(playlist);
-                System.out.println("Playlist cadastrada.");
-            }
-            else{
-                System.out.println("Usuário não encontrado.");
-            }
-        }
+            do { 
+                System.out.println("Inserir Musicas:");
+                System.out.println("1 para inserir, 0 para parar");
 
-        else{
-            System.out.println("Versão não cadastrada.");
-        }
+                switch (contador) {
+
+                    case 1: 
+
+                        String nomeMusica= Console.readString("Digite a Música: ");
+                        Versao versao = versaoController.buscarPorNome(nomeMusica);
+                        
+                        if(versao != null){
+                            playlist.setMusica(versao);
+                            playlistController.cadastrar(playlist);
+                            System.out.println("Musica adicionada.");
+                            }
+                        playlistController.cadastrar(playlist);
+                    break;
+                    case 2:
+                        System.out.println("\n -- SAINDO -- \n");
+                        break;
+                    case 0:
+                            System.out.println("ok");
+                            break;
+                    default:
+                        System.out.println("\n -- -- \n");
+                        break;
+                
+                            
+            } 
+
+            }while (contador != 0);
 
         
-    }
+        }else{
+            System.out.println("Usuário não encontrado!");
+        }
     
+    }
 }
