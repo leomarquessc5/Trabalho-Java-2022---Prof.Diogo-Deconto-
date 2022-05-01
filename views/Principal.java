@@ -1,5 +1,19 @@
 package views;
 import utils.Console;
+import views.viewArtista.CadastrarArtista;
+import views.viewArtista.ListarArtista;
+import views.viewArtista.RemoverArtista;
+import views.viewLogin.CriarLogin;
+import views.viewMusicas.CadastrarMusica;
+import views.viewMusicas.ListarMusicas;
+import views.viewMusicas.RemoverMusica;
+import views.viewPlaylist.AdicionarPlaylist;
+import views.viewPlaylist.CadastrarPlaylist;
+import views.viewPlaylist.ExcluirPlaylist;
+import views.viewPlaylist.ListarPlaylist;
+import views.viewVersao.CadastrarVersao;
+import views.viewVersao.ListarVersao;
+import views.viewVersao.RemoverVersao;
 
 public class Principal {
     public static void main(String[] args) {
@@ -81,8 +95,8 @@ public class Principal {
                         System.out.println("\n -- USER LOGIN -- \n");
                         System.out.println("1 - Cadastrar login");
                         // System.out.println("2 - Listar login");
-                        // System.out.println("3 - Remover login");
-                        System.out.println("4 - Criar playlist");
+                        System.out.println("2 - Criar playlist");
+                        System.out.println("3 - Adicionar músicas à uma playlist");
                         System.out.println("5 - Listar playlist");
                         System.out.println("6 - Remover playlist");
                         System.out.println("7 - Listar todas as playslists");
@@ -106,11 +120,14 @@ public class Principal {
                             //     excluirLogin.excluirLogin();
                             //     break;
 
-                            case 4:
+                            case 2:
                                 CadastrarPlaylist cadastrarPlaylist = new CadastrarPlaylist();
                                 cadastrarPlaylist.cadastrar();
                                 break;
-                            
+                            case 3:
+                                AdicionarPlaylist adicionarPlaylist = new AdicionarPlaylist();
+                                adicionarPlaylist.adicionar();
+                                break;
                             case 5:
                                 ListarPlaylist listarPlaylist = new ListarPlaylist();
                                 listarPlaylist.listar();

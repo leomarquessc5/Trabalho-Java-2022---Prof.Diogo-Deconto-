@@ -6,6 +6,14 @@ public class Playlist {
     private Login criador;
     private Versao musica;
 
+    private Playlist playlist;
+    public Playlist getPlaylist() {
+        return playlist;
+    }
+    public void setPlaylist(Playlist playlist) {
+        this.playlist = playlist;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -27,7 +35,7 @@ public class Playlist {
 
     @Override
     public String toString() {
-        return "Playlist : " + nome + "Criador: " + criador + "Musica: " + musica + " | ";
+        return " || Playlist : " + playlist + criador + " || Musica: " + musica + " || ";
     }
 
 }
