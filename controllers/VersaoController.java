@@ -6,14 +6,18 @@ public class VersaoController {
 
     private static ArrayList<Versao> versoes = new ArrayList<Versao>();
 
-    public void cadastrar(Versao versao){
-        versoes.add(versao);
+    public boolean cadastrar(Versao versao){
+        if(buscarPorNome(versao.getNome())==null){
+            versoes.add(versao);
+            return true;
+        }
+        return false;
     }
     public ArrayList<Versao> listar(){
         return versoes;
     }
 
-    public Versao buscarPorNome(String nome){
+    public static Versao buscarPorNome(String nome){
         for (Versao versaoCadastrada : versoes) {
             if(versaoCadastrada.getNome().equals(nome)){
                 return versaoCadastrada;
