@@ -1,35 +1,25 @@
 package models;
 
-public class Musica {
+public class Musica  extends Midia{
     
-    private String nome;
-    private double duracao;
-    private String compositor;
+    private Artista interprete;
     
-    public String getNome() {
-        return nome;
+    public Artista getInterprete() {
+        return interprete;
     }
-    public void setNome(String nome) {
 
-        this.nome = nome;
+    public void setInterprete(Artista interprete) {
+        this.interprete = interprete;
     }
-    public double getDuracao() {
-        return duracao;
-    }
-    public void setDuracao(double duracao) {
-        this.duracao = duracao;
-    }
-    public String getCompositor() {
-        return compositor;
-    }
-    public void setCompositor(String compositor) {
-        this.compositor = compositor;
+
+    public Musica (String titulo, String autor, Double duracao, Artista interprete, String genero){
+        super(titulo, autor, duracao, genero);
+        setInterprete(interprete);
     }
 
     @Override
     public String toString() {
-        return 
-            " | Música: " + nome + " | Duração: " + duracao + " | Compositor: " + compositor;
+        return super.toString()+ "|| Intérprete: " + getInterprete() + "|| Data de criação: " + super.getData();
     }
     
 }
